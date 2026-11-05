@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Information Registration</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            margin: 30px;
+        }
+
+        .container {
+            width: 90%;
+            margin: auto;
+            border: 2px solid #888;
+            border-radius: 3px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .step {
+            text-align: center;
+            color: #1685bd;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        form {
+            width: 80%;
+            margin: auto;
+            border: 1px solid #b5cbdc;
+            border-radius: 4px;
+            padding: 10px;
+        }
+
+        fieldset {
+            border: 1px solid #b5cbdc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        legend {
+            text-align: center;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .form-row {
+            display: flex;
+            align-items: center;
+            margin: 5px 0;
+        }
+
+        label {
+            width: 35%;
+            font-size: 13px;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="date"],
+        select {
+            width: 45%;
+            height: 23px;
+            border: 1px solid #b5cbdc;
+            border-radius: 3px;
+            padding: 2px 5px;
+            box-sizing: border-box;
+        }
+
+        .gender {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            width: 45%;
+            font-size: 13px;
+        }
+
+        .gender label {
+            width: auto;
+        }
+
+        .buttons {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        button {
+            background-color: #1685bd;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 8px 20px;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 0 5px;
+        }
+
+        button:hover {
+            background-color: #08618f;
+        }
+
+        footer {
+            background-color: #0875b5;
+            color: white;
+            text-align: center;
+            padding: 8px;
+            font-size: 12px;
+            margin-top: 10px;
+            border-radius: 0 0 20px 20px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                width: 100%;
+                padding: 10px;
+            }
+
+            form {
+                width: 95%;
+            }
+
+            .form-row {
+                flex-wrap: wrap;
+            }
+
+            label {
+                width: 100%;
+                margin-bottom: 4px;
+            }
+
+            input[type="text"],
+            input[type="password"],
+            input[type="date"],
+            select,
+            .gender {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="step">
+        Step 1 of 5
+    </div>
+
+    <form>
+
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <div class="form-row">
+                <label for="surname">Sur Name</label>
+                <input type="text" id="surname" name="surname">
+            </div>
+
+            <div class="form-row">
+                <label for="firstname">First Name</label>
+                <input type="text" id="firstname" name="firstname">
+            </div>
+
+            <div class="form-row">
+                <label for="othernames">Other Names</label>
+                <input type="text" id="othernames" name="othernames">
+            </div>
+
+            <div class="form-row">
+                <label>Gender</label>
+
+                <div class="gender">
+                    <input type="radio" id="male"
+                           name="gender" value="Male">
+                    <label for="male">Male</label>
+
+                    <input type="radio" id="female"
+                           name="gender" value="Female">
+                    <label for="female">Female</label>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <label for="marital">Marital Status</label>
+                <select id="marital" name="marital">
+                    <option value="">Select - Status</option>
+                    <option>Single</option>
+                    <option>Married</option>
+                    <option>Divorced</option>
+                    <option>Widowed</option>
+                </select>
+            </div>
+
+            <div class="form-row">
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="dob">
+            </div>
+
+            <div class="form-row">
+                <label for="birthplace">Place of Birth</label>
+                <input type="text" id="birthplace"
+                       name="birthplace">
+            </div>
+
+            <div class="form-row">
+                <label for="mother">Mothers Name</label>
+                <input type="text" id="mother" name="mother">
+            </div>
+
+            <div class="form-row">
+                <label for="father">fathers Name</label>
+                <input type="text" id="father" name="father">
+            </div>
+
+            <div class="form-row">
+                <label for="dependants">
+                    number of Dependants
+                </label>
+
+                <select id="dependants" name="dependants">
+                    <option value="">Select - No of Dependants</option>
+                    <option>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5 or more</option>
+                </select>
+            </div>
+
+            <div class="form-row">
+                <label for="education">
+                    level of Education
+                </label>
+                <input type="text" id="education"
+                       name="education">
+            </div>
+
+        </fieldset>
+
+
+        <fieldset>
+            <legend>Security Information</legend>
+
+            <div class="form-row">
+                <label for="username">UserName</label>
+                <input type="text" id="username"
+                       name="username">
+            </div>
+
+            <div class="form-row">
+                <label for="password">Password</label>
+                <input type="password" id="password"
+                       name="password">
+            </div>
+
+            <div class="form-row">
+                <label for="repassword">
+                    Re-type Password
+                </label>
+                <input type="password" id="repassword"
+                       name="repassword">
+            </div>
+
+            <div class="form-row">
+                <label for="question">
+                    Security Question
+                </label>
+
+                <select id="question" name="question">
+                    <option value="">Select - Question</option>
+                    <option>What is your mother's maiden name?</option>
+                    <option>What is your favourite colour?</option>
+                    <option>What is your first school?</option>
+                    <option>What is your favourite food?</option>
+                </select>
+            </div>
+
+            <div class="form-row">
+                <label for="answer">Answer</label>
+                <input type="text" id="answer"
+                       name="answer">
+            </div>
+
+        </fieldset>
+
+        <div class="buttons">
+            <button type="button">Previous</button>
+            <button type="submit">Next</button>
+        </div>
+
+    </form>
+
+    <footer>
+        Copyright © 2011 all rights reserved
+    </footer>
+
+</div>
+
+</body>
+</html>
